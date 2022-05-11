@@ -115,7 +115,7 @@ jobs:
           source .venv/bin/activate
           # NOTE: This will not fully succeed for the time being
           mypy servo/
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v3
         with:
           name: mypy-reports
           path: artifacts/
@@ -151,7 +151,7 @@ jobs:
           --cov-report=xml:artifacts/coverage.xml --cov-report=html:artifacts/coverage-html \
           --junitxml=artifacts/report.xml --html=artifacts/report.html \
           --self-contained-html
-    - uses: actions/upload-artifact@v2
+    - uses: actions/upload-artifact@v3
       with:
         name: test-reports
         path: artifacts/
@@ -223,7 +223,7 @@ jobs:
         source .venv/bin/activate
         pytest -n 8 \
           -T integration --verbose --durations=0 --durations-min=5
-    - uses: actions/upload-artifact@v2
+    - uses: actions/upload-artifact@v3
       with:
         name: integration-test-logs
         path: logs/
@@ -309,7 +309,7 @@ jobs:
         source .venv/bin/activate
         pytest -n 6 \
           -T system --verbose --durations=0 --durations-min=5
-    - uses: actions/upload-artifact@v2
+    - uses: actions/upload-artifact@v3
       with:
         name: system-test-logs
         path: logs/
