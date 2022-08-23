@@ -177,9 +177,9 @@ optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 
 [package.extras]
-redis = ["redis (>=3.3.6,<4.0.0)"]
-memcached = ["python-memcached (>=1.59,<2.0)"]
 msgpack = ["msgpack-python (>=0.5,<0.6)"]
+memcached = ["python-memcached (>=1.59,<2.0)"]
+redis = ["redis (>=3.3.6,<4.0.0)"]
 
 [[package]]
 name = "certifi"
@@ -241,7 +241,7 @@ optional = false
 python-versions = "*"
 
 [package.extras]
-test = ["flake8 (==3.7.8)", "hypothesis (==3.55.3)"]
+test = ["hypothesis (==3.55.3)", "flake8 (==3.7.8)"]
 
 [[package]]
 name = "configupdater"
@@ -252,7 +252,7 @@ optional = false
 python-versions = ">=3.6"
 
 [package.extras]
-testing = ["sphinx", "flake8", "pytest", "pytest-cov", "pytest-virtualenv", "pytest-xdist"]
+testing = ["pytest-xdist", "pytest-virtualenv", "pytest-cov", "pytest", "flake8", "sphinx"]
 
 [[package]]
 name = "coverage"
@@ -309,10 +309,10 @@ optional = false
 python-versions = "*"
 
 [package.extras]
-all = ["Sphinx (>=1.4.4)", "sphinx-rtd-theme (>=0.1.9)", "check-manifest (>=0.25)", "coverage (>=4.0)", "isort (>=4.2.2)", "mock (>=1.3.0)", "pydocstyle (>=1.0.0)", "pytest-cov (>=1.8.0)", "pytest-pep8 (>=1.0.6)", "pytest (>=2.8.0)", "tox (>=3.7.0)", "numpy (>=1.11.0)"]
-docs = ["Sphinx (>=1.4.4)", "sphinx-rtd-theme (>=0.1.9)"]
+tests = ["tox (>=3.7.0)", "pytest (>=2.8.0)", "pytest-pep8 (>=1.0.6)", "pytest-cov (>=1.8.0)", "pydocstyle (>=1.0.0)", "mock (>=1.3.0)", "isort (>=4.2.2)", "coverage (>=4.0)", "check-manifest (>=0.25)"]
 numpy = ["numpy (>=1.11.0)"]
-tests = ["check-manifest (>=0.25)", "coverage (>=4.0)", "isort (>=4.2.2)", "mock (>=1.3.0)", "pydocstyle (>=1.0.0)", "pytest-cov (>=1.8.0)", "pytest-pep8 (>=1.0.6)", "pytest (>=2.8.0)", "tox (>=3.7.0)"]
+docs = ["sphinx-rtd-theme (>=0.1.9)", "Sphinx (>=1.4.4)"]
+all = ["numpy (>=1.11.0)", "tox (>=3.7.0)", "pytest (>=2.8.0)", "pytest-pep8 (>=1.0.6)", "pytest-cov (>=1.8.0)", "pydocstyle (>=1.0.0)", "mock (>=1.3.0)", "isort (>=4.2.2)", "coverage (>=4.0)", "check-manifest (>=0.25)", "sphinx-rtd-theme (>=0.1.9)", "Sphinx (>=1.4.4)"]
 
 [[package]]
 name = "distlib"
@@ -604,8 +604,8 @@ toml = "*"
 urllib3 = "*"
 
 [package.extras]
-docs = ["alabaster", "pygments-github-lexers", "recommonmark", "sphinx"]
-dev = ["dlint", "flake8-2020", "flake8-aaa", "flake8-absolute-import", "flake8-alfred", "flake8-annotations-complexity", "flake8-bandit", "flake8-black", "flake8-broken-line", "flake8-bugbear", "flake8-builtins", "flake8-coding", "flake8-cognitive-complexity", "flake8-commas", "flake8-comprehensions", "flake8-debugger", "flake8-django", "flake8-docstrings", "flake8-eradicate", "flake8-executable", "flake8-expression-complexity", "flake8-fixme", "flake8-functions", "flake8-future-import", "flake8-import-order", "flake8-isort", "flake8-logging-format", "flake8-mock", "flake8-mutable", "flake8-mypy", "flake8-pep3101", "flake8-pie", "flake8-print", "flake8-printf-formatting", "flake8-pyi", "flake8-pytest", "flake8-pytest-style", "flake8-quotes", "flake8-requirements", "flake8-rst-docstrings", "flake8-scrapy", "flake8-spellcheck", "flake8-sql", "flake8-strict", "flake8-string-format", "flake8-tidy-imports", "flake8-todo", "flake8-use-fstring", "flake8-variables-names", "isort", "mccabe", "pandas-vet", "pep8-naming", "pylint", "pytest", "typing-extensions", "wemake-python-styleguide"]
+dev = ["wemake-python-styleguide", "typing-extensions", "pytest", "pylint", "pep8-naming", "pandas-vet", "mccabe", "isort", "flake8-variables-names", "flake8-use-fstring", "flake8-todo", "flake8-tidy-imports", "flake8-string-format", "flake8-strict", "flake8-sql", "flake8-spellcheck", "flake8-scrapy", "flake8-rst-docstrings", "flake8-requirements", "flake8-quotes", "flake8-pytest-style", "flake8-pytest", "flake8-pyi", "flake8-printf-formatting", "flake8-print", "flake8-pie", "flake8-pep3101", "flake8-mypy", "flake8-mutable", "flake8-mock", "flake8-logging-format", "flake8-isort", "flake8-import-order", "flake8-future-import", "flake8-functions", "flake8-fixme", "flake8-expression-complexity", "flake8-executable", "flake8-eradicate", "flake8-docstrings", "flake8-django", "flake8-debugger", "flake8-comprehensions", "flake8-commas", "flake8-cognitive-complexity", "flake8-coding", "flake8-builtins", "flake8-bugbear", "flake8-broken-line", "flake8-black", "flake8-bandit", "flake8-annotations-complexity", "flake8-alfred", "flake8-absolute-import", "flake8-aaa", "flake8-2020", "dlint"]
+docs = ["sphinx", "recommonmark", "pygments-github-lexers", "alabaster"]
 
 [[package]]
 name = "freezegun"
@@ -1394,8 +1394,8 @@ pytest = ">=6.0.0"
 pytest-forked = "*"
 
 [package.extras]
-psutil = ["psutil (>=3.0)"]
 testing = ["filelock"]
+psutil = ["psutil (>=3.0)"]
 
 [[package]]
 name = "python-dateutil"
@@ -1738,10 +1738,10 @@ python-versions = ">=3.6"
 click = ">=7.1.1,<9.0.0"
 
 [package.extras]
-all = ["colorama (>=0.4.3,<0.5.0)", "shellingham (>=1.3.0,<2.0.0)"]
-dev = ["autoflake (>=1.3.1,<2.0.0)", "flake8 (>=3.8.3,<4.0.0)"]
-doc = ["mkdocs (>=1.1.2,<2.0.0)", "mkdocs-material (>=8.1.4,<9.0.0)", "mdx-include (>=1.4.1,<2.0.0)"]
-test = ["shellingham (>=1.3.0,<2.0.0)", "pytest (>=4.4.0,<5.4.0)", "pytest-cov (>=2.10.0,<3.0.0)", "coverage (>=5.2,<6.0)", "pytest-xdist (>=1.32.0,<2.0.0)", "pytest-sugar (>=0.9.4,<0.10.0)", "mypy (==0.910)", "black (>=22.3.0,<23.0.0)", "isort (>=5.0.6,<6.0.0)"]
+test = ["isort (>=5.0.6,<6.0.0)", "black (>=22.3.0,<23.0.0)", "mypy (==0.910)", "pytest-sugar (>=0.9.4,<0.10.0)", "pytest-xdist (>=1.32.0,<2.0.0)", "coverage (>=5.2,<6.0)", "pytest-cov (>=2.10.0,<3.0.0)", "pytest (>=4.4.0,<5.4.0)", "shellingham (>=1.3.0,<2.0.0)"]
+doc = ["mdx-include (>=1.4.1,<2.0.0)", "mkdocs-material (>=8.1.4,<9.0.0)", "mkdocs (>=1.1.2,<2.0.0)"]
+dev = ["flake8 (>=3.8.3,<4.0.0)", "autoflake (>=1.3.1,<2.0.0)"]
+all = ["shellingham (>=1.3.0,<2.0.0)", "colorama (>=0.4.3,<0.5.0)"]
 
 [[package]]
 name = "types-aiofiles"
@@ -1769,7 +1769,7 @@ python-versions = "*"
 
 [[package]]
 name = "types-pytz"
-version = "2021.3.4"
+version = "2022.2.1.0"
 description = "Typing stubs for pytz"
 category = "dev"
 optional = false
@@ -1900,7 +1900,7 @@ optional = false
 python-versions = ">=3.5"
 
 [package.extras]
-dev = ["pytest (>=4.6.2)", "black (>=19.3b0)"]
+dev = ["black (>=19.3b0)", "pytest (>=4.6.2)"]
 
 [[package]]
 name = "yamlpath"
@@ -1940,7 +1940,7 @@ testing = ["pytest (>=4.6)", "pytest-checkdocs (>=1.2.3)", "pytest-flake8", "pyt
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.8,<=3.9.11"
-content-hash = "1f947278dafe9a169ff786d40ef47e74a49f0cc2c69925c67f2e20bc53ee873e"
+content-hash = "f1ebcbca39919186a0ab73f6b0e7f199ea0e08260c9600b480958d11789d7d90"
 
 [metadata.files]
 aiofiles = [
@@ -2898,8 +2898,8 @@ types-python-dateutil = [
     {file = "types_python_dateutil-2.8.9-py3-none-any.whl", hash = "sha256:d60db7f5d40ce85ce54e7fb14e4157daf33e24f5a4bfb5f44ee7a5b790dfabd0"},
 ]
 types-pytz = [
-    {file = "types-pytz-2021.3.4.tar.gz", hash = "sha256:101da53091013bb07403468c20d36930d749d3918054ac46f9c1bfc607dadf7d"},
-    {file = "types_pytz-2021.3.4-py3-none-any.whl", hash = "sha256:ccfa2ed29f816e3de2f882541c06ad2791f808a79cfe38265411820190999f0f"},
+    {file = "types-pytz-2022.2.1.0.tar.gz", hash = "sha256:47cfb19c52b9f75896440541db392fd312a35b279c6307a531db71152ea63e2b"},
+    {file = "types_pytz-2022.2.1.0-py3-none-any.whl", hash = "sha256:50ead2254b524a3d4153bc65d00289b66898060d2938e586170dce918dbaf3b3"},
 ]
 types-pyyaml = [
     {file = "types-PyYAML-6.0.4.tar.gz", hash = "sha256:6252f62d785e730e454dfa0c9f0fb99d8dae254c5c3c686903cf878ea27c04b7"},
